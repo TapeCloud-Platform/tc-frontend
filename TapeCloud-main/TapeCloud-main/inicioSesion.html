@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - TapeCloud</title>
+  <link rel="icon" href="images/TapeCloud.jpeg" type="image/jpeg" />
+  <link rel="stylesheet" href="Styles/styles.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-container">
+    <div class="auth-card">
+      <img class="auth-logo" src="images/TapeCloud.jpeg" alt="TapeCloud logo" />
+      <div class="auth-copy">
+        <p class="eyebrow">INICIO DE SESIÓN</p>
+        <h1>Accede a TapeCloud</h1>
+        <p class="form-help">Solo acceso por invitación del administrador. No hay registro público disponible.</p>
+      </div>
+
+      <form class="auth-form" action="portal.html" method="get">
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input id="email" type="email" placeholder="tu@empresa.com" required />
+          <p class="error-text hidden">Este correo no está autorizado. Contacta al administrador.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input id="password" type="password" placeholder="••••••••••••" required />
+          <p class="error-text hidden">Contraseña incorrecta. Revisa tus datos.</p>
+        </div>
+
+        <button type="submit" class="primary-button">Acceder</button>
+        <a class="primary-button small-button" href="crearCuenta.html">crear cuenta</a>
+      </form>
+
+      <div class="auth-links">
+        <a class="text-link subtle" href="change-password.html">¿Olvidaste tu contraseña?</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

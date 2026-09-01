@@ -1,0 +1,1190 @@
+/*======================================================
+                HEADER
+======================================================*/
+
+.portal-header{
+
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 60px;
+
+  backdrop-filter:blur(20px);
+
+  background:rgba(7,17,31,.55);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.portal-header>div:first-child{
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+}
+
+.auth-logo{
+
+  width:70px;
+  height:70px;
+
+  border-radius:22px;
+
+  padding:8px;
+
+  background:rgba(255,255,255,.06);
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,.25);
+
+  transition:.4s;
+
+}
+
+.auth-logo:hover{
+
+  transform:scale(1.08) rotate(-4deg);
+
+}
+
+.portal-header h1{
+
+  font-size:2rem;
+
+  background:linear-gradient(
+  90deg,
+  white,
+  #9dc8ff);
+
+  -webkit-background-clip:text;
+  color:transparent;
+
+}
+
+.eyebrow{
+
+  font-size:.8rem;
+
+  text-transform:uppercase;
+
+  letter-spacing:4px;
+
+  color:#7db2ff;
+
+  margin-bottom:6px;
+
+}
+
+.portal-actions{
+
+  display:flex;
+  gap:18px;
+  align-items:center;
+
+}
+
+
+/*======================================================
+              CONTENEDOR
+======================================================*/
+
+.portal-content{
+
+  width:min(1350px,92%);
+
+  margin:auto;
+
+  padding:60px 0;
+
+  display:grid;
+
+  grid-template-columns:
+  1fr
+  320px;
+
+  gap:45px;
+
+}
+
+
+/*======================================================
+              GRID
+======================================================*/
+
+.apps-panel{
+
+  animation:fadeUp .8s ease;
+
+}
+
+.apps-grid{
+
+  margin-top:25px;
+
+  display:grid;
+
+  grid-template-columns:
+
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:30px;
+
+}
+
+
+/*======================================================
+              TARJETAS
+======================================================*/
+
+.app-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  padding:35px;
+
+  background:rgba(255,255,255,.06);
+
+  backdrop-filter:blur(18px);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  transition:.45s;
+
+  box-shadow:
+
+  0 20px 45px rgba(0,0,0,.25);
+
+}
+
+
+/* brillo */
+
+.app-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:250px;
+  height:250px;
+
+  background:
+  radial-gradient(circle,
+  rgba(255,255,255,.12),
+  transparent 70%);
+
+  top:-160px;
+  right:-160px;
+
+  transition:.5s;
+
+}
+
+
+/* línea inferior */
+
+.app-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:0;
+
+  width:100%;
+  height:4px;
+
+  background:
+
+  linear-gradient(
+  90deg,
+  var(--primary),
+  var(--secondary));
+
+  transform:scaleX(0);
+
+  transition:.35s;
+
+}
+
+
+/* hover */
+
+.app-card:hover{
+
+  transform:
+
+  translateY(-10px);
+
+  border-color:
+
+  rgba(96,165,250,.30);
+
+  box-shadow:
+
+  0 35px 60px rgba(0,0,0,.35);
+
+}
+
+
+.app-card:hover::after{
+
+  transform:scaleX(1);
+
+}
+
+
+.app-card:hover::before{
+
+  transform:scale(1.2);
+
+}
+
+
+/*======================================================
+              LOGOS
+======================================================*/
+
+.app-logo{
+
+  width:78px;
+  height:78px;
+
+  border-radius:22px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  font-size:1.7rem;
+
+  font-weight:700;
+
+  color:white;
+
+  margin-bottom:22px;
+
+  box-shadow:
+
+  0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.app-logo-film{
+
+  background:
+
+  linear-gradient(
+  135deg,
+  #2563eb,
+  #60a5fa);
+
+}
+
+.app-logo-music{
+
+  background:
+
+  linear-gradient(
+  135deg,
+  #6366f1,
+  #8b5cf6);
+
+}
+
+
+/*======================================================
+              TITULOS
+======================================================*/
+
+.app-card h2{
+
+  font-size:1.55rem;
+
+  margin-bottom:10px;
+
+}
+
+.app-card p{
+
+  margin-bottom:30px;
+
+  color:#c7d5ec;
+
+}
+
+
+/*======================================================
+              BOTON
+======================================================*/
+
+.app-card .primary-button{
+
+  width:100%;
+
+  justify-content:center;
+
+}
+
+
+/*======================================================
+              PERFIL
+======================================================*/
+
+.profile-summary{
+
+  animation:fadeUp 1s;
+
+}
+
+.profile-summary .card{
+
+  position:sticky;
+
+  top:120px;
+
+  padding:35px;
+
+  border-radius:30px;
+
+  backdrop-filter:blur(18px);
+
+  background:rgba(255,255,255,.05);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+
+  0 20px 50px rgba(0,0,0,.30);
+
+}
+
+
+.profile-summary h2{
+
+  margin-bottom:15px;
+
+}
+
+
+.profile-summary p{
+
+  margin-bottom:25px;
+
+}
+
+
+/*======================================================
+              LINKS
+======================================================*/
+
+.text-link{
+
+  color:#87bfff;
+
+  font-weight:600;
+
+  transition:.3s;
+
+}
+
+.text-link:hover{
+
+  color:white;
+
+}
+
+
+/*======================================================
+          EFECTO GENERAL
+======================================================*/
+
+.card,
+.app-card{
+
+  will-change:transform;
+
+}
+:root{
+
+    /* Paleta */
+
+    --bg:#07111f;
+    --bg2:#0d1b2a;
+    --bg3:#132238;
+
+    --card:rgba(255,255,255,.06);
+
+    --card-hover:rgba(255,255,255,.10);
+
+    --glass:rgba(255,255,255,.08);
+
+    --border:rgba(255,255,255,.10);
+
+    --primary:#3B82F6;
+
+    --primary-light:#60A5FA;
+
+    --secondary:#8B5CF6;
+
+    --text:#ffffff;
+
+    --text2:#cbd5e1;
+
+    --shadow:0 20px 50px rgba(0,0,0,.35);
+
+    --radius:24px;
+
+    --transition:.35s ease;
+
+}
+
+/*=========================
+RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--text);
+
+    background:var(--bg);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+
+/*=========================
+AURORA BACKGROUND
+=========================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(59,130,246,.18),
+    transparent 30%),
+
+    radial-gradient(circle at 80% 15%,
+    rgba(139,92,246,.14),
+    transparent 28%),
+
+    radial-gradient(circle at 70% 85%,
+    rgba(96,165,250,.12),
+    transparent 25%),
+
+    linear-gradient(
+        180deg,
+        var(--bg),
+        var(--bg2),
+        var(--bg3)
+    );
+
+    z-index:-3;
+
+}
+
+
+/*=========================
+AURORA MOVING
+=========================*/
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:180%;
+
+    height:180%;
+
+    left:-40%;
+
+    top:-40%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(59,130,246,.06),
+    transparent 45%),
+
+    radial-gradient(circle,
+    rgba(139,92,246,.05),
+    transparent 45%);
+
+    animation:aurora 22s linear infinite;
+
+    z-index:-2;
+
+    filter:blur(70px);
+
+}
+
+@keyframes aurora{
+
+    0%{
+
+        transform:
+        rotate(0deg)
+        translateX(0);
+
+    }
+
+    50%{
+
+        transform:
+        rotate(180deg)
+        translateX(60px);
+
+    }
+
+    100%{
+
+        transform:
+        rotate(360deg)
+        translateX(0);
+
+    }
+
+}
+
+
+/*=========================
+SCROLL
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08101d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+    var(--primary),
+    var(--secondary));
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#7aa8ff;
+
+}
+
+
+/*=========================
+TEXTOS
+=========================*/
+
+h1,h2,h3,h4{
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+}
+
+p{
+
+    color:var(--text2);
+
+    line-height:1.7;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/*=========================
+SELECCIÓN
+=========================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+/*=========================
+ANIMACIONES
+=========================*/
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.scale{
+
+    animation:scale .5s;
+
+}
+
+@keyframes scale{
+
+    from{
+
+        transform:scale(.95);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=========================
+IMÁGENES
+=========================*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    user-select:none;
+
+}
+
+
+/*=========================
+BOTONES
+=========================*/
+
+.primary-button,
+.button-outline{
+
+    transition:all .35s ease;
+
+}
+
+.primary-button{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #4f8cff);
+
+    color:white;
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:14px 28px;
+
+    font-weight:600;
+
+    box-shadow:
+    0 12px 30px rgba(59,130,246,.25);
+
+}
+
+.primary-button:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 20px 40px rgba(59,130,246,.35);
+
+}
+
+.button-outline{
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.03);
+
+    color:white;
+
+}
+
+.button-outline:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+/*======================================================
+        EFECTOS PREMIUM
+======================================================*/
+
+/* Aparición escalonada */
+
+.apps-grid .app-card{
+
+  opacity:0;
+
+  transform:translateY(40px);
+
+  animation:cardAppear .8s forwards;
+
+}
+
+.apps-grid .app-card:nth-child(1){
+
+  animation-delay:.2s;
+
+}
+
+.apps-grid .app-card:nth-child(2){
+
+  animation-delay:.45s;
+
+}
+
+.apps-grid .app-card:nth-child(3){
+
+  animation-delay:.7s;
+
+}
+
+.apps-grid .app-card:nth-child(4){
+
+  animation-delay:.95s;
+
+}
+
+@keyframes cardAppear{
+
+  to{
+
+      opacity:1;
+
+      transform:translateY(0);
+
+  }
+
+}
+
+
+/*========================================
+LOGO
+========================================*/
+
+.auth-logo{
+
+  animation:logoFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes logoFloat{
+
+  0%{
+
+      transform:translateY(0);
+
+  }
+
+  50%{
+
+      transform:translateY(-8px);
+
+  }
+
+  100%{
+
+      transform:translateY(0);
+
+  }
+
+}
+
+
+/*========================================
+Glow del título
+========================================*/
+
+.portal-header h1{
+
+  text-shadow:
+
+  0 0 18px rgba(96,165,250,.18);
+
+}
+
+
+/*========================================
+Cards
+========================================*/
+
+.app-card{
+
+  cursor:pointer;
+
+  isolation:isolate;
+
+}
+
+
+/* Luz */
+
+.app-card .light{
+
+  position:absolute;
+
+  width:250px;
+
+  height:250px;
+
+  border-radius:50%;
+
+  background:
+
+  radial-gradient(circle,
+
+  rgba(255,255,255,.14),
+
+  transparent 70%);
+
+  pointer-events:none;
+
+  opacity:0;
+
+  transition:.3s;
+
+  z-index:-1;
+
+}
+
+.app-card:hover .light{
+
+  opacity:1;
+
+}
+
+
+/*========================================
+Botón
+========================================*/
+
+.primary-button{
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+.primary-button::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+
+  left:-120%;
+
+  width:100%;
+
+  height:100%;
+
+  background:
+
+  linear-gradient(
+
+  120deg,
+
+  transparent,
+
+  rgba(255,255,255,.35),
+
+  transparent);
+
+  transition:.8s;
+
+}
+
+.primary-button:hover::before{
+
+  left:130%;
+
+}
+
+.primary-button:active{
+
+  transform:scale(.97);
+
+}
+
+
+/*========================================
+Links
+========================================*/
+
+.text-link{
+
+  position:relative;
+
+}
+
+.text-link::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  bottom:-3px;
+
+  width:0;
+
+  height:2px;
+
+  background:var(--primary);
+
+  transition:.3s;
+
+}
+
+.text-link:hover::after{
+
+  width:100%;
+
+}
+
+
+/*========================================
+Aurora
+========================================*/
+
+body::before{
+
+  animation:backgroundMove 20s linear infinite;
+
+}
+
+@keyframes backgroundMove{
+
+  0%{
+
+      filter:hue-rotate(0deg);
+
+  }
+
+  100%{
+
+      filter:hue-rotate(18deg);
+
+  }
+
+}
+
+
+/*========================================
+Partículas
+========================================*/
+
+#particles{
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:-4;
+
+  pointer-events:none;
+
+}
+
+
+/*========================================
+Cursor personalizado
+========================================*/
+
+.cursor{
+
+  width:16px;
+
+  height:16px;
+
+  border-radius:50%;
+
+  position:fixed;
+
+  background:#60A5FA;
+
+  pointer-events:none;
+
+  z-index:9999;
+
+  mix-blend-mode:screen;
+
+  transition:
+
+  transform .08s linear;
+
+}
+
+
+/*========================================
+Responsive
+========================================*/
+
+@media(max-width:980px){
+
+.portal-header{
+
+padding:20px;
+
+flex-direction:column;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+.portal-content{
+
+grid-template-columns:1fr;
+
+}
+
+.profile-summary .card{
+
+position:relative;
+
+top:auto;
+
+}
+
+.apps-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+/*========================================
+Pequeños detalles
+========================================*/
+
+.app-card h2{
+
+transition:.3s;
+
+}
+
+.app-card:hover h2{
+
+letter-spacing:.5px;
+
+}
+
+.app-card:hover .app-logo{
+
+transform:rotate(-5deg) scale(1.08);
+
+transition:.35s;
+
+}
+
+.portal-header{
+
+transition:.35s;
+
+}
+
+.portal-header:hover{
+
+background:rgba(10,20,40,.70);
+
+backdrop-filter:blur(30px);
+
+}
