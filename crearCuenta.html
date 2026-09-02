@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - TapeCloud</title>
+  <title>Signin - TapeCloud</title>
   <link rel="icon" href="images/TapeCloud.jpeg" type="image/jpeg" />
   <link rel="stylesheet" href="Styles/styles.css" />
 </head>
@@ -12,10 +12,8 @@
     <div class="auth-card">
       <img class="auth-logo" src="images/TapeCloud.jpeg" alt="TapeCloud logo" />
       <div class="auth-copy">
-        <p class="eyebrow">INICIO DE SESIÓN</p>
-        <h1>Accede a TapeCloud</h1>
-        <p class="form-help">Solo acceso por invitación del administrador. No hay registro público disponible.</p>
-      </div>
+        <p class="eyebrow">registro de cuenta</p>
+        <h1>Crear cuenta en TapeCloud</h1>
 
       <form class="auth-form" action="portal.html" method="get">
         <div class="form-group">
@@ -29,14 +27,23 @@
           <input id="password" type="password" placeholder="••••••••••••" required />
           <p class="error-text hidden">Contraseña incorrecta. Revisa tus datos.</p>
         </div>
-
-        <button type="submit" class="primary-button">Acceder</button>
-        <a class="primary-button small-button" href="crearCuenta.html">crear cuenta</a>
+<div class="form-group">
+          <label for="confirm-password">Confirmar contraseña</label>
+          <input id="confirm-password" type="password" placeholder="••••••••••••" required />
+        </div>
       </form>
 
-      <div class="auth-links">
-        <a class="text-link subtle" href="change-password.html">¿Olvidaste tu contraseña?</a>
-      </div>
+      <div class="strength-meter">
+          <span>Fortaleza de contraseña</span>
+          <div class="strength-track">
+            <span class="strength-bar strength-medium"></span>
+          </div>
+        </div>
+        <p class="form-note">Tu contraseña debe tener al menos 12 caracteres y combinar letras, números y símbolos.</p>
+        <br>
+        <a class="primary-button small-button" href="index.html">Continuar</a>
+      </form>
+    </div>
     </div>
   </main>
 </body>
